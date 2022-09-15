@@ -1,0 +1,20 @@
+let raceNumber = Math.floor(Math.random() * 1000);
+let early = 1;
+let runnerAge = 20;
+
+if (runnerAge > 18 && early === 1) {
+console.log(raceNumber+= 1000);
+} else { console.log('not early adult');}
+
+if (runnerAge > 18 && early === 1){
+  console.log(`${raceNumber} will race at 9:30am`);} 
+else if (runnerAge > 18 && early === 0) { console.log(`${raceNumber} will race at 11:00am`);}
+else { console.log('not adult');}
+
+if (runnerAge < 18) {
+  console.log (`${raceNumber} will race at 12:30pm`);
+} else { console.log('not young');}
+
+if (runnerAge === 18 && early === 1) {
+  console.log ('please go to the registration desk');
+} else { console.log ('please go to the registration desk');}
