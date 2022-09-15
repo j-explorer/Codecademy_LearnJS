@@ -1,0 +1,61 @@
+//hours I've slept in the past week
+const getSleepHours = day => {
+  if (day==='monday') {
+    return 8;
+  } 
+  else if (day==='tuesday') {
+    return 6;
+  }
+  else if (day==='wednesday') {
+    return 6;
+  } 
+  else if (day==='thursday') {
+    return 7;
+  } 
+  else if (day==='friday') {
+    return 5;
+  } 
+  else if (day==='saturday') {
+    return 10;
+  } 
+ else if (day==='sunday') {
+    return 8;
+  }
+};
+
+//calculation to get weekly hours
+const getActualSleepHours = () => 
+  getSleepHours('monday')+
+  getSleepHours('tuesday') +
+  getSleepHours('wednesday') +
+  getSleepHours('thursday') +
+  getSleepHours('friday') +
+  getSleepHours('saturday') +
+  getSleepHours('sunday');
+
+  console.log(getActualSleepHours());
+
+//Ideal weekly hours of sleep
+getIdealSleepHours= () =>{
+let idealHours = 8
+return (idealHours*7);
+};
+
+console.log(getIdealSleepHours());
+
+//How many more hours of sleep I need to achieve my ideal sleep/week//
+const calculateSleepDebt = () => {
+  const actualSleepHours = getActualSleepHours();
+  const idealSleepHours = getIdealSleepHours();
+
+let result= (actualSleepHours - idealSleepHours);
+
+if (actualSleepHours===idealSleepHours)
+  {return ('user got good sleep, 0 hours needed')} 
+else if(actualSleepHours>idealSleepHours)
+  {console.log(`user got more sleep than needed, to be exact, ${result} more hours worth`)}
+else if(actualSleepHours< idealSleepHours)
+{return (`user should get some more rest, to be exact, ${result*-1} more hours worth`)}
+
+calculateSleepDebt();
+};
