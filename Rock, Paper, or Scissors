@@ -19,36 +19,37 @@ const getComputerChoice = () =>{
 
 
 const determineWinner = (userChoice, computerChoice) => {
-  if (userChoice === computerChoice){
-    return 'tie';
-  } 
+  if (userChoice === computerChoice) {return 'tie'};
+  
   if (userChoice ==='rock'){
      if (computerChoice === 'paper') {
     return 'computer has won';
   } else {return 'user has won' }
-}
+};
 
 if (userChoice === 'paper'){
   if (computerChoice === 'scissors') {
     return 'computer has won';
   } else {return 'user has won' }
- }
+ };
 
  if (userChoice === 'scissors'){
   if (computerChoice === 'rock') {
     return 'computer has won';
   } else {return 'user has won' }
- }
-}
+ };
+ 
+ if (userChoice=== 'bomb'){
+  return 'OP! User Wins!'};
+};
 
 
 const playGame = () => {
-const userChoice = getUserChoice('paper');
-const computerChoice = getComputerChoice();
-};
+const userChoice = getUserChoice('bomb');
+const computerChoice = getComputerChoice();console.log(userChoice)
+console.log(computerChoice)
 
-determineWinner(paper, getComputerChoice());
-console.log('The computer threw: ' + getComputerChoice());
-console.log('You threw: ' + getUserChoice('paper'));
+console.log(determineWinner(userChoice, computerChoice));
+};
 
 console.log(playGame());
