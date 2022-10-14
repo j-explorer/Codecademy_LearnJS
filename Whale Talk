@@ -1,0 +1,45 @@
+//Whale Talk has 14 tasks
+
+//First attempt: without reading tasks
+
+/*let input=["it", "is", "a", "cold", "autumn", "day", "today"];
+
+for (i = 0; i < input.length; i++) {
+  if(i="a"){
+    console.log("A");
+}if(i="e"){
+    console.log("EE")
+}if(i="i"){
+    console.log("I")
+}if(i="o"){
+    console.log("O")
+}if(i="u"){
+    console.log("UU")
+}if(i="y"){
+    console.log("Y")
+};
+};*/
+
+/*second attempt: only read first few tasks to initialize the 
+first three variables and inner/outer looping(30).*/ 
+
+const input="it is a cold autumn day today";
+
+const vowels=["a", "e", "i", "o", "u"];
+
+const resultArray =[];
+
+for (i = 0; i < input.length; i++) {
+ for(v = 0; v < vowels.length; v++){
+   if(input[i] === vowels[v]){
+    resultArray.push(input[i])
+    };
+  };
+};
+
+for (r = 0; r < resultArray.length; r++){
+  if(resultArray[r] ==="u"){
+    resultArray[r] = "u u"};
+}; 
+
+  console.log(`Our whale song!! 👏 🐋 ${resultArray.join(" ").toUpperCase()} 🐳 👏`); 
